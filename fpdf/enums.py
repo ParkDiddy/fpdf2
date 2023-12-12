@@ -298,6 +298,9 @@ class TableBordersLayout(CoerciveEnum):
     SINGLE_TOP_LINE = intern("SINGLE_TOP_LINE")
     "Draw only the top horizontal border, below the headings"
 
+    ALL_LINES_MINUS_VERTICAL = intern("ALL_LINES_MINUS_VERTICAL")
+    "Draw all lines except vertical lines"
+
 
 class TableCellFillMode(CoerciveEnum):
     "Defines which table cells to fill"

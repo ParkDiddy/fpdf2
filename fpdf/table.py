@@ -266,6 +266,21 @@ class Table:
             if rows_count == 1:
                 return 0
             return "B" if i < self._num_heading_rows else 0
+        if self._borders_layout == TableBordersLayout.ALL_LINES_MINUS_VERTICAL:
+            if rows_count == 1:
+                return 0
+
+            if i != rows_count - 1:
+                border.remove('B')
+
+            if j == 0:
+                border.remove('R')
+            elif not is_rightmost_column:
+                border.remove('L')
+                border.remove('R')
+            else:
+                border.remove('L')
+
         return "".join(border)
 
     def _render_table_row(self, i, row_layout_info, cell_x_positions, **kwargs):
