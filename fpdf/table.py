@@ -275,7 +275,9 @@ class Table:
             elif i != rows_count - 1:
                 border.remove('B')
 
-            if j == 0:
+            if j == 0 and is_rightmost_column:
+                pass
+            elif j == 0 and not is_rightmost_column:
                 border.remove('R')
             elif not is_rightmost_column:
                 border.remove('L')
