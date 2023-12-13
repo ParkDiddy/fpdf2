@@ -270,7 +270,9 @@ class Table:
             if rows_count == 1:
                 return 0
 
-            if i != rows_count - 1:
+            if i == 0:
+                pass
+            elif i != rows_count - 1:
                 border.remove('B')
 
             if j == 0:
